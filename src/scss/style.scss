@@ -2407,10 +2407,12 @@ header.responsive768
     @media (max-width:1024px)
     {
         padding-bottom: 20px;
+        border-top:none
     }
     @include sm()
     {
         padding-bottom: 20px;
+        border-top: none;
     }
     padding: 100px 0px;
     border-top: 5px solid #333;

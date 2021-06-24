@@ -381,7 +381,10 @@ const showProducts = (products) =>
 showProducts(products);
 
 /*====Add product to Wishlist===== */
-let wishlist = [];
+let wishlist = JSON.parse(localStorage.getItem("wishlist"));
+$("#wishlist span").text(`${wishlist.length}`);
+$("#wishlist-icon span").text(`${wishlist.length}`);
+
 $(document).ready(function () {
     $(document).on("click",".wishlist-click", function (e) {
         e.preventDefault();
@@ -392,18 +395,70 @@ $(document).ready(function () {
             $(".wishlist-notice").fadeToggle().delay(2000).fadeOut();  
             wishlist.push(products[idx]); 
         }
-        
         $("#wishlist span").text(`${wishlist.length}`);
         $("#wishlist-icon span").text(`${wishlist.length}`);
         $(this).children("a").empty();
         $(this).children("a").append(`<i class="fas fa-heart"></i>`);
         $(this).children("a").children("i").css("color","red");
+        upLoadVar(wishlist);
     });
 });
 
 /*====Add product to Cart====*/
-let cart = [];
-let quantity=0;
+// render cart
+const renderCart = (cart,quantity)=>
+{
+    $('.render-cart .items').empty();
+    $('#items-in-cart').text(`${quantity}`)
+    $("#cart span").text(`${quantity}`);
+    $("#subtotal").text(`£${cart.reduce((acc,val)=>{
+       let price = Number(val.price.split("").splice(1,val.price.length).join(""));
+       return Number((acc+val.quantity*price).toFixed(2)) },0)}`);
+    $("#cart-icon span").text(`${quantity}`);
+    if(cart.length)
+    {
+        $(".render-cart .foot").css("display", "flex");
+        cart.map((val)=>
+        {
+            $(
+                `
+                <div class="cart-item flex">
+                    <div class="image">
+                        <img src="${val.imgUrl}">
+                    </div>
+                    <div class="info flex f-column a-start">
+                        <p class="name">${val.name}</p>
+                        <div class="quantity flex a-center">
+                            <span class="sub" data-id="${val.id}"><i class="fas fa-minus"></i></span>
+                            <span class="sub-quantity">${val.quantity}</span>
+                            <span class="plus" data-id="${val.id}"><i class="fas fa-plus"></i></span>
+                        </div>
+                    </div>
+                    <div class="flex f-column a-end right">
+                        <span class="delete-item" data-id="${val.id}"><i class="fas fa-times"></i></span>
+                        <span>£${Number((val.quantity * Number(val.price.split("").splice(1,val.price.length).join(""))).toFixed(2))}</span>
+                    </div>
+               </div>
+                `
+            ).appendTo(".render-cart .items");
+        });
+    }
+    else
+    {
+        $(".render-cart .items").text("No product in cart.");
+        $(".render-cart .foot").css("display", "none");
+    }
+    upLoadVar(cart);
+}
+//up load to localStorage
+const upLoadVar = (cart)=> {localStorage.setItem("cart",JSON.stringify(cart));}
+let cart = JSON.parse(localStorage.getItem("cart"));
+let quantity= cart.reduce((acc,val)=>
+{
+    return acc+val.quantity;
+},0);
+renderCart(cart,quantity);
+//click cart icon in product
 $(document).ready(function () {
     $(document).on("click",".cart-click", function (e) {
         e.preventDefault();
@@ -419,11 +474,12 @@ $(document).ready(function () {
             const item = products.find((val)=>val.id === curId);
             cart.push({...item,quantity:1});
         }
+        
         $(".wishlist-notice").text("A product has been added to your cart!").fadeToggle().delay(2000).fadeOut();   
          quantity = cart.reduce((acc,val)=>
         {
             return acc+val.quantity;
-        },0)
+        },0);
         renderCart(cart,quantity);
     });
 
@@ -470,6 +526,7 @@ $(document).ready(function () {
         {
             renderCart(cart,quantity);
         }
+        
     });
     // delete item from cart
     $(document).on("click",".delete-item", function () {
@@ -479,51 +536,8 @@ $(document).ready(function () {
         cart.splice(idx,1);
         renderCart(cart,quantity)   
     });
+    
 });
- // render cart
- const renderCart = (cart,quantity)=>
- {
-     $('.render-cart .items').empty();
-     $('#items-in-cart').text(`${quantity}`)
-     $("#cart span").text(`${quantity}`);
-     $("#subtotal").text(`£${cart.reduce((acc,val)=>{
-        let price = Number(val.price.split("").splice(1,val.price.length).join(""));
-        return Number((acc+val.quantity*price).toFixed(2)) },0)}`);
-     $("#cart-icon span").text(`${quantity}`);
-     if(cart.length)
-     {
-         $(".render-cart .foot").css("display", "flex");
-         cart.map((val)=>
-         {
-             $(
-                 `
-                 <div class="cart-item flex">
-                     <div class="image">
-                         <img src="${val.imgUrl}">
-                     </div>
-                     <div class="info flex f-column a-start">
-                         <p class="name">${val.name}</p>
-                         <div class="quantity flex a-center">
-                             <span class="sub" data-id="${val.id}"><i class="fas fa-minus"></i></span>
-                             <span class="sub-quantity">${val.quantity}</span>
-                             <span class="plus" data-id="${val.id}"><i class="fas fa-plus"></i></span>
-                         </div>
-                     </div>
-                     <div class="flex f-column a-end right">
-                         <span class="delete-item" data-id="${val.id}"><i class="fas fa-times"></i></span>
-                         <span>£${Number((val.quantity * Number(val.price.split("").splice(1,val.price.length).join(""))).toFixed(2))}</span>
-                     </div>
-                </div>
-                 `
-             ).appendTo(".render-cart .items");
-         });
-     }
-     else
-     {
-         $(".render-cart .items").text("No product in cart.");
-         $(".render-cart .foot").css("display", "none");
-     }
- }
  
 /*==== Quick view product====*/
 $(document).ready(function () {

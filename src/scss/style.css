@@ -2927,12 +2927,14 @@ header.responsive768 .container .bar .close-bar i {
 @media (max-width: 1024px) {
   .information {
     padding-bottom: 20px;
+    border-top: none;
   }
 }
 
 @media (max-width: 768px) {
   .information {
     padding-bottom: 20px;
+    border-top: none;
   }
 }
 
