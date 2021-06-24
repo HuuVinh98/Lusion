@@ -1,0 +1,38 @@
+@import "_grid";
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li 
+{
+    list-style-type: none;
+}
+a 
+{
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+input, button 
+{
+    outline: none;
+}
+.container
+{
+    max-width: 1300px;
+    margin: 0 auto;
+    @include lg(){
+        padding: 0px 3%;
+    }
+}
+.container2
+{
+    max-width: 1400px;
+    margin: 0 auto;
+    @include lg(){
+        padding: 0px 3%;
+    }
+}
