@@ -102,7 +102,7 @@ body {
 }
 
 #header-origin .container .content {
-  margin-left: 350px;
+  margin-left: 250px;
 }
 
 #header-origin .container .content nav ul li a {
@@ -151,6 +151,7 @@ body {
 
 .information {
   border-bottom: none;
+  border-top: none;
 }
 
 .information .container .info li ul li img {
@@ -177,6 +178,265 @@ body {
 
 .information .container .subscribe .subs-email a:hover {
   background-color: #2c2c2c;
+}
+
+.scroll-to-top {
+  background-color: #2c2c2c;
+}
+
+.shopping-cart {
+  margin-top: 200px;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.shopping-cart .container {
+  width: 100%;
+}
+
+.shopping-cart .container .return a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #2c2c2c;
+  display: block;
+  padding: 20px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.shopping-cart .container .content {
+  display: none;
+  width: 100%;
+}
+
+.shopping-cart .container .content button {
+  cursor: pointer;
+}
+
+.shopping-cart .container .content h1 {
+  text-align: center !important;
+  font-weight: 400;
+  color: #2c2c2c;
+}
+
+.shopping-cart .container .content #shopping-products {
+  margin: 50px 0px;
+}
+
+.shopping-cart .container .content #shopping-products table {
+  width: 100%;
+}
+
+.shopping-cart .container .content #shopping-products table tr td {
+  border-bottom: 1px solid #ebeeee;
+  padding: 20px 0px;
+}
+
+.shopping-cart .container .content #shopping-products table tr td .image {
+  width: 100px;
+  height: 150px;
+  border: 1px solid #ebeeee;
+  margin-right: 20px;
+}
+
+.shopping-cart .container .content #shopping-products table tr td .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.shopping-cart .container .content #shopping-products table tr td .text .name a {
+  color: #2c2c2c;
+}
+
+.shopping-cart .container .content #shopping-products table tr td .text .rate i {
+  color: yellow;
+}
+
+.shopping-cart .container .content #shopping-products table tr td .quantity {
+  padding: 10px 10px;
+  border: 1px solid #ebeeee;
+  width: 100px;
+}
+
+.shopping-cart .container .content .two-button button {
+  border: 1px solid #333;
+  color: #2c2c2c;
+  background-color: white;
+  width: 200px;
+  padding: 20px;
+  font-size: 16px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.shopping-cart .container .content .two-button button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.shopping-cart .container .content .coupon {
+  margin-top: 20px;
+}
+
+.shopping-cart .container .content .coupon p {
+  color: #2c2c2c;
+}
+
+.shopping-cart .container .content .coupon p i {
+  margin-right: 10px;
+}
+
+.shopping-cart .container .content .coupon form {
+  border: 1px solid #ebeeee;
+  margin-left: 20px;
+  width: 50%;
+}
+
+.shopping-cart .container .content .coupon form input, .shopping-cart .container .content .coupon form button {
+  padding: 15px;
+  border: none;
+  font-size: 16px;
+}
+
+.shopping-cart .container .content .coupon form input {
+  width: 80%;
+}
+
+.shopping-cart .container .content .coupon form button {
+  border-left: 1px solid #ebeeee;
+  position: relative;
+  width: 100px;
+  background-color: white;
+}
+
+.shopping-cart .container .content .coupon form button span {
+  position: absolute;
+  color: #2c2c2c;
+  z-index: 2;
+}
+
+.shopping-cart .container .content .coupon form button:hover span {
+  color: white;
+}
+
+.shopping-cart .container .content .coupon form button:hover::after {
+  width: 100%;
+}
+
+.shopping-cart .container .content .coupon form button::after {
+  width: 0%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: #333;
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.shopping-cart .container .content .cost-tax {
+  margin-top: 20px;
+}
+
+.shopping-cart .container .content .cost-tax .left {
+  width: 73%;
+}
+
+.shopping-cart .container .content .cost-tax .left table {
+  border: 1px solid #ebeeee;
+}
+
+.shopping-cart .container .content .cost-tax .left table tr td {
+  border: 1px solid #ebeeee;
+  padding: 20px;
+}
+
+.shopping-cart .container .content .cost-tax .left table tr td form input, .shopping-cart .container .content .cost-tax .left table tr td form select {
+  width: 48%;
+  padding: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  border: 1px solid #ebeeee;
+}
+
+.shopping-cart .container .content .cost-tax .left table tr td button {
+  padding: 20px;
+  width: 200px;
+  border: 1px solid #333;
+  position: relative;
+  background-color: white;
+}
+
+.shopping-cart .container .content .cost-tax .left table tr td button::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  z-index: 1;
+  background-color: #2c2c2c;
+  display: block;
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+}
+
+.shopping-cart .container .content .cost-tax .left table tr td button span {
+  color: #2c2c2c;
+  position: absolute;
+  z-index: 2;
+}
+
+.shopping-cart .container .content .cost-tax .left table tr td button:hover span {
+  color: white;
+}
+
+.shopping-cart .container .content .cost-tax .left table tr td button:hover::after {
+  width: 100%;
+}
+
+.shopping-cart .container .content .cost-tax .left table tr:first-child td {
+  text-align: center;
+  font-size: 18px;
+  color: #2c2c2c;
+}
+
+.shopping-cart .container .content .cost-tax .right {
+  width: 25%;
+}
+
+.shopping-cart .container .content .cost-tax .right table {
+  width: 100%;
+  border: 1px solid #ebeeee;
+}
+
+.shopping-cart .container .content .cost-tax .right table tr td {
+  border: 1px solid #ebeeee;
+  padding: 20px;
+}
+
+.shopping-cart .container .content .cost-tax .right table tr td p {
+  margin-bottom: 20px;
+}
+
+.shopping-cart .container .content .cost-tax .right table tr td button {
+  width: 100%;
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  background-color: #2c2c2c;
+  border: none;
+}
+
+.shopping-cart .container .content .cost-tax .right table tr:first-child td {
+  text-align: center;
+  color: #2c2c2c;
+  font-size: 18px;
 }
 
 footer {

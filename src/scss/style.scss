@@ -2863,7 +2863,7 @@ footer
        {
             padding: 25px 0px;
             width: 100%;
-            span 
+            a 
             {
                 z-index: 10;
                 font-size: 18px;
@@ -2871,7 +2871,7 @@ footer
             &:nth-child(2)
             {
                 border: 1px solid $hover-color;
-                span 
+                a 
                 {
                     color: $hover-color;
                     position: absolute;
@@ -2885,7 +2885,7 @@ footer
                     {
                         width: 100%;
                     }
-                    span 
+                    a 
                     {
                         color: white;
                     }
@@ -2908,7 +2908,7 @@ footer
             {
                 background: $hover-color;
                 border: none;
-                span 
+                a 
                 {
                     color: white;
                     position: absolute;
@@ -2918,11 +2918,12 @@ footer
                 position: relative;
                 &:hover
                 {
+                    border: 1px solid $hover-color;
                     &::after
                     {
                         width: 0%;
                     }
-                    span 
+                    a
                     {
                         color: $hover-color;
                     }

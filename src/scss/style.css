@@ -53,6 +53,11 @@
           flex-direction: column;
 }
 
+.wr-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3389,7 +3394,7 @@ footer .container .left p a:hover {
   width: 100%;
 }
 
-.render-cart .foot button span {
+.render-cart .foot button a {
   z-index: 10;
   font-size: 18px;
 }
@@ -3401,7 +3406,7 @@ footer .container .left p a:hover {
   position: relative;
 }
 
-.render-cart .foot button:nth-child(2) span {
+.render-cart .foot button:nth-child(2) a {
   color: #C27B43;
   position: absolute;
 }
@@ -3410,7 +3415,7 @@ footer .container .left p a:hover {
   width: 100%;
 }
 
-.render-cart .foot button:nth-child(2):hover span {
+.render-cart .foot button:nth-child(2):hover a {
   color: white;
 }
 
@@ -3436,16 +3441,20 @@ footer .container .left p a:hover {
   position: relative;
 }
 
-.render-cart .foot button:nth-child(3) span {
+.render-cart .foot button:nth-child(3) a {
   color: white;
   position: absolute;
+}
+
+.render-cart .foot button:nth-child(3):hover {
+  border: 1px solid #C27B43;
 }
 
 .render-cart .foot button:nth-child(3):hover::after {
   width: 0%;
 }
 
-.render-cart .foot button:nth-child(3):hover span {
+.render-cart .foot button:nth-child(3):hover a {
   color: #C27B43;
 }
 

@@ -335,7 +335,7 @@ const products = [
     {id:"lusion9",name:'Remy Martin VSOP',price:"£17.74",rate:5,imgUrl:"./src/img/listOfDrinks/Remy-345x465.png",filter:"top"},
     {id:"lusion10",name:'Jack Daniel\'s Old',price:"£14.65",rate:5,imgUrl:"./src/img/listOfDrinks/Jack-345x465.png",filter:"best"},
 ];
-
+localStorage.setItem('products',JSON.stringify(products));
 /*====fill products in products list====*/
 const showProducts = (products) =>
 {
@@ -525,8 +525,7 @@ $(document).ready(function () {
         else
         {
             renderCart(cart,quantity);
-        }
-        
+        } 
     });
     // delete item from cart
     $(document).on("click",".delete-item", function () {
@@ -576,6 +575,7 @@ $(document).ready(function () {
         ).appendTo(".quick-view-section");
         $(".quick-view-section").fadeIn().css("display","flex");
     });
+    //close quick view
     $(document).on("click",".close-quick-view", function (e) {
         $(".quick-view-section").fadeOut();
     });
