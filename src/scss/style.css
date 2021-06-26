@@ -3490,6 +3490,12 @@ footer .container .left p a:hover {
   position: relative;
 }
 
+@media (max-width: 1300px) {
+  .quick-view-section .quick-view-box {
+    width: 95%;
+  }
+}
+
 .quick-view-section .quick-view-box .image {
   height: 100%;
   background-color: #f5f5f5;

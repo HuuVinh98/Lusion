@@ -103,3 +103,61 @@ $("#update-cart").click(function (e) {
     localStorage.setItem("cart",JSON.stringify(shoppingCart));
     location.reload();
 });
+/*====Search function===*/
+$(document).ready(function () {
+    $("#Csearch-input").keyup(function (e) { 
+        let press = $(this).val();
+        let searchList = products.filter((val)=>
+        {
+            return val.name.toLocaleLowerCase().includes(press.toLocaleLowerCase())
+        });
+        $(".search-list").empty();
+        if(searchList.length)
+        {
+            $(".search-list").css("height", "80vh");
+            $(".search-box").css("background", "#1a1d24");
+            searchList.map((val)=>
+            {
+                $(
+                `
+                    <div class="product flex f-column">
+                        <div class="image">
+                            <img src=".${val.imgUrl}" alt="">
+                            <ul class="option flex a-center j-center">
+                                <li class="cart-click" data-id=${val.id}>
+                                    <a href=""><i class="fas fa-shopping-basket"></i></a>
+                                </li>
+                                <li class="quick-view-click" data-id=${val.id}>
+                                    <div class="talk-bubble flex a-center f-center"><p>Quick View</p></div>
+                                    <a href=""><i class="fas fa-search-plus"></i></a>
+                                </li>
+                                <li class="wishlist-click" data-id=${val.id}>
+                                    <div class="talk-bubble flex a-center f-center"><p>Wishlist</p></div>
+                                    <a href=""><i class="far fa-heart"></i></a>
+                                    </li>
+                                <li class="compare-click" data-id=${val.id}>
+                                    <div class="talk-bubble flex a-center f-center"><p>Compare</p></div>
+                                    <a href=""><i class="fas fa-random"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <h4 class="productName"><a href="">${val.name.split(press).join(`<span style="color:red">${press}</span>`)}</a></h4>
+                            <div class="rate-price flex j-spaceBetween a-center">
+                            <div class="rate">${`<i class="fas fa-star"></i> `.repeat(val.rate)}${`<i class="far fa-star"></i>`.repeat(5-val.rate)}</div>
+                                <div class="price">${val.price}</div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                ).appendTo(".search-list");
+            });
+        }
+        if(press==="")
+        {
+            $(".search-list").empty();
+            $(".search-list").css("height", "0vh");
+            $(".search-box").css("background", "none");
+        }  
+    });
+});

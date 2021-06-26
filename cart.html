@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../src/scss/reset.css">
     <link rel="stylesheet" href="../src/scss/style.css">
     <link rel="stylesheet" href="../src/scss/cart.css">
-    
-    <title>Cart</title>
+    <link rel="icon" href="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/03/cropped-logo-1-32x32.png" sizes="32x32">
+    <title>Shopping Cart - Lusion</title>
 </head>
 <body>
     
@@ -340,7 +340,7 @@
                 <span></span>
             </div>
             <div class="logo">
-                <a href="./index.html"><img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/04/Logo2.png.webp" alt=""></a>
+                <a href="../index.html"><img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/04/Logo2.png.webp" alt=""></a>
             </div>
             <span id="search-res"><i class="fas fa-search"></i></span>
         </div>
@@ -1108,6 +1108,44 @@
         </ul>
     </div>
     <!--Finishefd Tool bar-->
+
+    <!--show cart-->
+    <div class="render-cart flex f-column">
+        <div class="head flex j-spaceBetween">
+            <span>Cart(<span id="items-in-cart">0</span>)</span>
+            <span class="close-cart"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="items flex f-column j-start">
+
+        </div>
+        <div class="foot flex f-column">
+            <div class="subtotal flex j-spaceBetween">
+                <span>Subtotal:</span>
+                <span id="subtotal" style="font-size: 20px;"></span>
+                </div>
+            <button class="flex j-center a-center"><a href="./cart.html" target="_blank">View Cart</a></button>
+            <button class="flex j-center a-center"><a>Checkout</a></button>
+        </div>
+    </div>
+    <!--Finished show cart-->
+
+    <!--Compare products-->
+    <div class="compare-products flex a-center j-center">
+        <div class="compare-products-box">
+            <div class="head">
+                <p>Compare products</p>
+            
+            </div>
+            <span class="close-compare-products"><i class="fas fa-times"></i></span>
+            <table class="content"></table>
+        </div>
+    </div>
+    <!--Finished Compare products-->
+
+    <!--Show quick view box-->
+    <div class="quick-view-section flex a-center j-center">
+        
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="../src/js/cart.js"></script>

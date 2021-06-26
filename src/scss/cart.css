@@ -9,6 +9,7 @@ body {
 
 #header-origin {
   background: white !important;
+  border-bottom: 1px solid #ebeeee;
 }
 
 #header-origin .topBar {
@@ -146,6 +147,31 @@ body {
 }
 
 .responsive1025 .container .bar .close-bar i, .responsive768 .container .bar .close-bar i {
+  color: #2c2c2c !important;
+}
+
+.search-box {
+  background-color: white !important;
+}
+
+.search-box .content {
+  background: white !important;
+}
+
+.search-box .content .container form input {
+  background-color: white !important;
+}
+
+.search-box .search-list .product .image {
+  border: 1px solid #707070;
+  background-image: none;
+}
+
+.search-box .search-list .product .info h4 {
+  text-align: center;
+}
+
+.search-box .search-list .product .info h4 a {
   color: #2c2c2c !important;
 }
 

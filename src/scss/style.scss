@@ -2959,6 +2959,10 @@ footer
     .quick-view-box
     {
         width: 80%;
+        @media (max-width:1300px)
+        {
+            width: 95%;
+        }
         height: 80%;
         background-color: white;
         position: relative;

@@ -400,7 +400,16 @@ $(document).ready(function () {
         $(this).children("a").empty();
         $(this).children("a").append(`<i class="fas fa-heart"></i>`);
         $(this).children("a").children("i").css("color","red");
-        upLoadVar(wishlist);
+        upLoadVar(wishlist,name="wishlist");
+    });
+
+    $("#wishlist").click(function (e) { 
+        e.preventDefault();
+        window.open("./wishlist.html","_blank");
+    });
+    $("#wishlist-icon").click(function (e) { 
+        e.preventDefault();
+        window.open("./wishlist.html","_blank");
     });
 });
 
@@ -448,10 +457,10 @@ const renderCart = (cart,quantity)=>
         $(".render-cart .items").text("No product in cart.");
         $(".render-cart .foot").css("display", "none");
     }
-    upLoadVar(cart);
+    upLoadVar(cart,name="cart");
 }
 //up load to localStorage
-const upLoadVar = (cart)=> {localStorage.setItem("cart",JSON.stringify(cart));}
+const upLoadVar = (cart,name="cart")=> {localStorage.setItem(`${name}`,JSON.stringify(cart));}
 let cart = JSON.parse(localStorage.getItem("cart"));
 let quantity= cart.reduce((acc,val)=>
 {
@@ -681,7 +690,7 @@ $(document).ready(function () {
             return acc+val.quantity;
         },0);
         renderCart(cart,quantity);
-        $(this).parent("td").html(`<a href="" class="view-to-cart">View cart <i class="fas fa-play-circle" style="color:red;"></i></a>`);
+        $(this).parent("td").html(`<a href="./cart.html" class="view-to-cart">View cart <i class="fas fa-play-circle" style="color:red;"></i></a>`);
         
     });
     //render compare list

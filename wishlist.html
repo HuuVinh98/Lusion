@@ -2,21 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/scss/reset.css">
-    <link rel="stylesheet" href="./src/scss/style.css">
+    <link rel="stylesheet" href="../src/scss/reset.css">
+    <link rel="stylesheet" href="../src/scss/style.css">
+    <link rel="stylesheet" href="../src/scss/wishlist.css">
     <link rel="icon" href="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/03/cropped-logo-1-32x32.png" sizes="32x32">
-    <title>Home Liquor Store - Lusion</title>
+    <title>Wishlist - Lusion</title>
 </head>
 <body>
-    <!--Header-->
-    <header id="header-origin">
+    
+     <!--Header-->
+     <header id="header-origin" class="flex f-column">
+         <!--Before header-->
+        <div class="topBar">
+            <div class="container flex j-spaceBetween">
+                <ul class="flex left">
+                    <li class="flex f-column">
+                        <a href="">About Us</a>
+                        <span></span>
+                    </li>
+                    <li class="flex f-column">
+                        <a href="">Our Policy</a>
+                        <span></span>
+                    </li>
+                </ul>
+                <ul class="flex right">
+                    <li>
+                        <div class="up">
+                            <span>English</span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="down">
+                            <ul>
+                                <li class="flex">
+                                    <img src="../src/img/flag/english.png" alt="">
+                                    <span>English</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="../src/img/flag/france.png" alt="">
+                                    <span>France</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="../src/img/flag/germany.png" alt="">
+                                    <span>Germany</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="up">
+                            <span>USD</span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="down down-ex">
+                            <span>GPB</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Finished Before header-->
         <div class="container flex j-spaceBetween a-center">
             <div class="logo">
-                <a href="./index.html"><img src="./src/img/logo_liquor.png.webp" alt=""></a>
+                <a href="./index.html"><img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/04/Logo2.png.webp" alt=""></a>
             </div>
             <div class="content flex j-spaceBetween a-center">
                 <nav>
@@ -144,7 +196,7 @@
                                     </ul>
                                 </div>
                                 <div class="picture">
-                                    <img src="./src/img/menu-home-bg.jpg.webp" alt="">
+                                    <img src="../src/img/menu-home-bg.jpg.webp" alt="">
                                     <div class="text">
                                         <h3>Homepage Default</h3>
                                         <p class="flex f-column">
@@ -156,20 +208,16 @@
                             </div>
                         </li>
                         <li class="flex f-column">
-                            <a href="">Liqueurs</a>
+                            <a href="">Shop</a>
                             <span class="straight"></span>
                            
                         </li>
                         <li class="flex f-column">
-                            <a href="">Wines</a>
+                            <a href="">Product</a>
                             <span class="straight"></span>
                         </li>
                         <li class="flex f-column">
-                            <a href="">Beer</a>
-                            <span class="straight"></span>
-                        </li>
-                        <li class="flex f-column">
-                            <a href="">Accessories</a>
+                            <a href="">Pages</a>
                             <span class="straight"></span>
                         </li>
                         <li class="flex f-column" id="blog">
@@ -236,7 +284,7 @@
                                     </ul>
                                     <div class="picture">
                                         <div class="image">
-                                            <img src="./src/img/blog-home-2-245x181.jpg.webp" alt="">
+                                            <img src="../src/img/blog-home-2-245x181.jpg.webp" alt="">
                                         </div>
                                         <a href="#">The New Essential to <br> Always Have On Hand</a>
                                     </div>
@@ -245,10 +293,7 @@
                                 
                             </div>
                         </li>
-                        <li class="flex f-column">
-                            <a href="">Contact Us</a>
-                            <span class="straight"></span>
-                        </li>
+                       
                     </ul>
                 </nav>
                 <ul class="icons flex">
@@ -270,7 +315,7 @@
     <header class="responsive1025">
         <div class="container flex j-spaceBetween a-center">
             <div class="logo">
-                <a href="./index.html"><img src="./src/img/logo_liquor.png.webp" alt=""></a>
+                <a href="./index.html"><img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/04/Logo2.png.webp" alt=""></a>
             </div>
             <form action="">
                 <input id="#search-input-1024" type="text" placeholder="Search bear, wine, liquor and extras...">
@@ -295,12 +340,12 @@
                 <span></span>
             </div>
             <div class="logo">
-                <a href="./index.html"><img src="./src/img/logo_liquor.png.webp" alt=""></a>
+                <a href="./index.html"><img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/04/Logo2.png.webp" alt=""></a>
             </div>
             <span id="search-res"><i class="fas fa-search"></i></span>
         </div>
     </header>
-    <!--Finished Header-->
+    <!--Finsehed Header-->
 
     <!--Mega menu for responsive-->
     <div class="mega-menu-responsive">
@@ -838,525 +883,158 @@
     </div>
     <!--Finished Scroll Top Button-->
 
-    <!--Type of Drinks-->
-    <div class="type-of-drinks">
+    <!--List of shopping products in cart-->
+    <div class="wishlist-section">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                    <div class="item">
-                        <img src="./src/img/liquor.jpg.webp" alt="">
-                        <div class="text">
-                            <h1><a href="#">Liquor</a></h1>
-                            <p>11 items</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                    <div class="item">
-                        <img src="./src/img/wine.jpg.webp" alt="">
-                        <div class="text">
-                            <h1><a href="#">Wine</a></h1>
-                            <p>3 items</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                    <div class="item">
-                        <img src="./src/img/beer.jpg.webp" alt="">
-                        <div class="text">
-                            <h1><a href="#">Beer</a></h1>
-                            <p>1 items</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                    <div class="item">
-                        <img src="./src/img/accessories.jpg.webp" alt="">
-                        <div class="text">
-                            <h1><a href="#">Accessories</a></h1>
-                            <p>13 items</p>
-                        </div>
-                    </div>
-                </div>
+            <h1>Wishlist</h1>
+            <div class="content flex wr-wrap">
+
             </div>
         </div>
     </div>
-    <!--Finished Type of Drinks-->
-<!--List of Products-->
-<div class="list-of-products">
-    <div class="container">
-        <div class="text flex j-center a-center f-column">
-            <div class="abc">
-                <h1>You want it? We got it.</h1>
-               
-                <div class="list-down">
-                    <div class="default flex j-spaceBetween">
-                        <span id="get-type">LIQUOR</span>
-                        <span class="angle flex">
-                            <i class="fas fa-angle-down"></i>
-                            <i class="fas fa-angle-up"></i>
-                        </span>
-                    </div>
-                    <ul class="flex j-spaceBetween f-column">
-                        <li id="liquor-res"><a href="#">LIQUOR</a></li>
-                        <li id="beer-res"><a href="#">BEER</a></li>
-                        <li id="wine-res"><a href="#">WINE</a></li>
-                        <li id="extras-res"><a href="#">EXTRAS</a></li>
+    <!--Finished List of shopping products in cart-->
+
+    <!--Infomation-->
+    <div class="information">
+        <div class="container flex j-spaceBetween">
+            <ul class="info flex j-spaceBetween">
+                <li>
+                    <ul>
+                        <li><img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/04/Logo2.png.webp" alt=""></li>
+                        <li class="phone flex"><p style="color:#2c2c2c;">Phone:</p><a href="phone:0988007796" style="color:#707070;">+98 0 9876 0954</a></li>
+                        <li class="mail flex"><p style="color:#2c2c2c;">Email:</p><a href="mailto:abcd@gmail.com" style="color:#707070;">info@Odndhfm.com</a></li>
+                        <li class="address flex"><p style="color:#2c2c2c;">Address:</p><p style="color:#707070;">Box 565, Charlestown, Nevis, West Indies, Caribbean</p></li>
+                        <li class="social flex a-center"><p style="color:#2c2c2c;">Social:</p><div class="icons flex">
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                            </span>
+                            <span>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                            </span>
+                            <span>
+                                <a href=""><i class="fab fa-pinterest"></i></a>
+                            </span>
+                            </div>
+                        </li>
                     </ul>
-                </div>
-                 
-                <ul class="flex j-spaceBetween menu-of-products a-center">
-                    <li id="liquor"><a href="#">LIQUOR</a></li>
-                    <li id="beer"><a href="#">BEER</a></li>
-                    <li id="wine"><a href="#">WINE</a></li>
-                    <li id="extras"><a href="#">EXTRAS</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="products-list flex j-spaceBetween">
-           
-        </div>
-    </div>
-</div>
-<!--Finished List of Products-->
+                </li>
 
-<!--Liqueur & Spirits-->
-    <div class="liqueur-spirit">
-        <div class="container flex f-column a-center j-spaceBetween">
-            <div class="title flex f-column a-center">
-                <h1>Liqueur & Spirits</h1>
-                <p>In addition to the 2 large categories of Wine and Whiskey, you will quickly discover the world of other drinks in this category with just one click.</p>
-            </div>
-            <div class="items">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
-                        <div class="item flex f-column a-center">
-                            <img src="./src/img/liqueur&spirits/Vodka.png.webp" alt="Vodka">
-                            <a href="#">Vodka</a>
-                        </div>
-                    </div>
+                <li>
+                    <ul>
+                        <li style="color:#2c2c2c;">Support</li>
+                        <li><a href="" style="color:#707070;">Help</a></li>
+                        <li><a href=""style="color:#707070;">Contact Uss</a></li>
+                        <li><a href=""style="color:#707070;">Feedback</a></li>
+                        <li><a href=""style="color:#707070;">Unsubcribe</a></li>
+                        <li><a href=""style="color:#707070;">Reservations</a></li>
+                    </ul>
+                </li>
 
-                    <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
-                        <div class="item flex f-column a-center">
-                            <img src="./src/img/liqueur&spirits/Cognac.png.webp" alt="Cognac">
-                            <a href="#">Cognac</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
-                        <div class="item flex f-column a-center">
-                            <img src="./src/img/liqueur&spirits/Grappa.png.webp" alt="Grappa">
-                            <a href="#">Grappa</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
-                        <div class="item flex f-column a-center">
-                            <img src="./src/img/liqueur&spirits/Scotch.png.webp" alt="Scotch">
-                            <a href="#">Scotch</a>
-                        </div>
-                    </div> <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
-                        <div class="item flex f-column a-center">
-                            <img src="./src/img/liqueur&spirits/Tequila.png.webp" alt="Tequila">
-                            <a href="#">Tequila</a>
-                        </div>
-                    </div> <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
-                        <div class="item flex f-column a-center">
-                            <img src="./src/img/liqueur&spirits/Rum.png.webp" alt="Rum">
-                            <a href="#">Rum</a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+                <li>
+                    <ul>
+                        <li style="color: #2c2c2c;">Policies</li>
+                        <li><a href="" style="color: #707070;">Privacy Policy</a></li>
+                        <li><a href="" style="color: #707070;">Terms of use</a></li>
+                        <li><a href="" style="color: #707070;">Gift card conditions</a></li>
+                        <li><a href="" style="color: #707070;">Shipping</a></li>
+                        <li><a href="" style="color: #707070;">Return</a></li>                    
+                    </ul>
+                </li>
+            </ul>
+            <ul class="subscribe">
+                <li style="color: #2c2c2c;">Join Our Newsletter</li>
+                <li><p style="color: #707070;">Subscribe to our newsletter and get 10% off your first purchase</p></li>
+                <li class="flex a-center subs-email">
+                    <input type="text" placeholder="Type your email" id="subcribe-email">
+                    <a href="#" id="submit-email" class="flex j-center a-center"><i class="fas fa-arrow-right"></i></a>
+                </li>
+            </ul>
         </div>
     </div>
-<!--Finished Liqueur & Spirits-->
+    <!--Finished Infomation-->
 
-<!--Deals-of-Month-->
-<div class="deals">
-    <div class="container flex j-spaceBetween">
-
-        <div class="left flex a-center j-center">
-            <div class="back"></div>
-            <div class="content flex f-column a-center">
-                <div class="text flex f-column a-center">
-                    <p>DEALS OF THE MONTH</p>
-                    <p>Savvy Savings</p>
-                </div>
-                <div class="count-down flex j-center">
-                    <div class="time days flex f-column j-center a-center">
-                        <span class="time-days">00</span>
-                        <span class="label">days</span>
-                    </div> 
-                    <div class="time hours flex f-column j-center a-center">
-                        <span class="time-hours">00</span>
-                        <span class="lable">hours</span>
-                    </div>
-                    <div class="time mins flex f-column j-center a-center">
-                        <span class="time-mins">00</span>
-                        <span class="label">mins</span>
-                    </div>
-                    <div class="time secs flex f-column j-center a-center">
-                        <span class="time-secs">00</span>
-                        <span class="lable">secs</span>
-                    </div>
-                </div>
-                <button><a href="#">Shop now</a></button>
+    <!--Footer-->
+    <footer>
+        <div class="container flex j-spaceBetween a-center">
+            <div class="left">
+                <p>© 2020 by <a href="#">Lusion</a> – All right reserved</p>
+            </div>
+            <div class="right">
+                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal5.png.webp" alt="">
+                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal4.png.webp" alt="">
+                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal3.png.webp" alt="">
+                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal2.png.webp" alt="">
+                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal1.png.webp" alt="">
+                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal.png.webp" alt="">
             </div>
         </div>
+    </footer>
+    <!--Finished Footer-->
 
-        <div class="right flex f-column j-spaceBetween">
-            <div class="right-top">
-                <div class="content">
-                    <p>15 Whisky Cocktails You'll Fall For</p>
-                    <p>We partnered with talented Ontario bartenders to create this autumn-inspired whisky cocktail collection.</p>
-                    <button><a href="#">Get the recipes</a></button>
-                </div>
-            </div>
-            <div class="right-bot flex j-spaceBetween">
-                <div class="item">
-                    <div class="content">
-                        <p>LOCALLY MADE</p>
-                        <p>Sale Now</p>
-                        <button><a href="#">Shop now</a></button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="content">
-                        <p>NEW ARRIVALS</p>
-                        <p>Vintages</p>
-                        <button><a href="#">Shop now</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Finshed Deals-of-Month-->
-
-<!--Products filter-->
-<div class="products-filter">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 new-arrival">
-                <div class="item flex f-column">
-                    <p>New Arrivals <span class="item-down"><i class="fas fa-angle-down"></i></span></p>
-                    <div class="new flex f-column">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 top-rate">
-                <div class="item flex f-column">
-                    <p>Top Rate <span class="item-down"><i class="fas fa-angle-down"></i></span></p>
-                    <div class="topRate flex f-column">
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 best-seller">
-                <div class="item flex f-column">
-                    <p>Best Seller <span class="item-down"><i class="fas fa-angle-down"></i></span></i></p>
-                    <div class="best flex f-column">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Finished Products filter-->
-
-<!--Featured Brands-->
-<div class="featured-brands">
-    <div class="container">
-        <h2>Featured Brands</h2>
-        <div class="brands flex">
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b8.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">AB Solut</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b5.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Amarula</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b3.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Chivas</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b1.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Hennessy</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b4.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Moet Chandon</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b7.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Sake</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b7.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Absolute Vodka</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b4.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Bacardi</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b3.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Gin</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b2.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Martell</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b2.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Remy Martin</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/11/b8.png.webp" alt="">
-                <div class="text flex f-column a-center j-center">
-                    <span><a href="#">Swing</a></span>
-                    <span>1 item</span>
-                    <span class="flex f-column">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Finished Featured Brands-->
-
-<!--The Lastest Blog-->
-<div class="lastest-blogs">
-    <div class="container">
-        <h2>The Latest Blog</h2>
-        <div class="blogs">
-            <div class="row">
-                
-            </div>
-        </div>
-    </div>
-</div>
-<!--Finished The Lastest Blog-->
-
-<!--Infomation-->
-<div class="information">
-    <div class="container flex j-spaceBetween">
-        <ul class="info flex j-spaceBetween">
-            <li>
-                <ul>
-                    <li>Contact Us</li>
-                    <li class="phone flex"><p>Phone:</p><a href="phone:0988007796">+98 0 9876 0954</a></li>
-                    <li class="mail flex"><p>Email:</p><a href="mailto:abcd@gmail.com">info@Odndhfm.com</a></li>
-                    <li class="address flex"><p style="color: #cebaa4;">Address:</p><p>Box 565, Charlestown, Nevis, West Indies, Caribbean</p></li>
-                    <li class="social flex a-center"><p>Social:</p><div class="icons flex">
-                        <span>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                        </span>
-                        <span>
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                        </span>
-                        <span>
-                            <a href=""><i class="fab fa-pinterest"></i></a>
-                        </span>
-                        </div>
-                    </li>
-                </ul>
+    <!--Tool bar-->
+    <div class="tool-bar">
+        <ul class="icons flex j-spaceBetween">
+            <li id="home-icon"><i class="fas fa-home"></i></i></li>
+            <li id="login-icon"><i class="far fa-user"></i></li>
+            <li id="wishlist-icon">
+                <i class="far fa-heart"></i>
+                <span class="flex j-center a-center">0</span>
             </li>
-
-            <li>
-                <ul>
-                    <li>Support</li>
-                    <li><a href="">Help</a></li>
-                    <li><a href="">Contact Uss</a></li>
-                    <li><a href="">Feedback</a></li>
-                    <li><a href="">Unsubcribe</a></li>
-                    <li><a href="">Reservations</a></li>
-                </ul>
+            <li id="cart-icon">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="flex a-center j-center">0</span>
             </li>
-
-            <li>
-                <ul>
-                    <li>Policies</li>
-                    <li><a href=""></a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of use</a></li>
-                    <li><a href="">Gift card conditions</a></li>
-                    <li><a href="">Shipping</a></li>
-                    <li><a href="">Return</a></li>                    
-                </ul>
-            </li>
-        </ul>
-        <ul class="subscribe">
-            <li>Join Our Newsletter</li>
-            <li><p>Subscribe to our newsletter and get 10% off your first purchase</p></li>
-            <li class="flex a-center subs-email">
-                <input type="text" placeholder="Type your email" id="subcribe-email">
-                <a href="#" id="submit-email" class="flex j-center a-center"><i class="fas fa-arrow-right"></i></a>
+            <li id="setting-icon">
+                <i class="fas fa-cog"></i>
             </li>
         </ul>
     </div>
-</div>
-<!--Finished Infomation-->
+    <!--Finishefd Tool bar-->
 
-<!--Footer-->
-<footer>
-    <div class="container flex j-spaceBetween a-center">
-        <div class="left">
-            <p>Enjoy responsibly: Alcohol products are not intended for people under the age of 18 and pregnant women.</p>
-            <p>© 2020 by <a href="#">Lusion</a> – All right reserved</p>
+    <!--Show quick view box-->
+    <div class="quick-view-section flex a-center j-center">       
+    </div>
+    <!--Finished Show quick view box-->
+    <!--Notice when add product to wishlist-->
+    <div class="wishlist-notice flex a-center j-center">
+        The product has been added to your wishlist!
+    </div>
+    <!--Finished Notice when add product to wishlist-->
+
+    <!--show cart-->
+    <div class="render-cart flex f-column">
+        <div class="head flex j-spaceBetween">
+            <span>Cart(<span id="items-in-cart">0</span>)</span>
+            <span class="close-cart"><i class="fas fa-times"></i></span>
         </div>
-        <div class="right">
-            <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal5.png.webp" alt="">
-            <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal4.png.webp" alt="">
-            <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal3.png.webp" alt="">
-            <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal2.png.webp" alt="">
-            <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal1.png.webp" alt="">
-            <img src="https://hn.arrowpress.net/lusion/wp-content/uploads/2020/05/paypal.png.webp" alt="">
+        <div class="items flex f-column j-start">
+
+        </div>
+        <div class="foot flex f-column">
+            <div class="subtotal flex j-spaceBetween">
+                <span>Subtotal:</span>
+                <span id="subtotal" style="font-size: 20px;"></span>
+                </div>
+            <button class="flex j-center a-center"><a href="./cart.html" target="_blank">View Cart</a></button>
+            <button class="flex j-center a-center"><a>Checkout</a></button>
         </div>
     </div>
-</footer>
-<!--Finished Footer-->
-
-<!--Tool bar-->
-<div class="tool-bar">
-    <ul class="icons flex j-spaceBetween">
-        <li id="home-icon"><i class="fas fa-home"></i></i></li>
-        <li id="login-icon"><i class="far fa-user"></i></li>
-        <li id="wishlist-icon">
-            <i class="far fa-heart"></i>
-            <span class="flex j-center a-center">0</span>
-        </li>
-        <li id="cart-icon">
-            <i class="fas fa-shopping-basket"></i>
-            <span class="flex a-center j-center">0</span>
-        </li>
-        <li id="setting-icon">
-            <i class="fas fa-cog"></i>
-        </li>
-    </ul>
-</div>
-<!--Finishefd Tool bar-->
-
-<!--Notice when add product to wishlist-->
-<div class="wishlist-notice flex a-center j-center">
-    The product has been added to your wishlist!
-</div>
-<!--Finished Notice when add product to wishlist-->
-
-<!--show cart-->
-<div class="render-cart flex f-column">
-    <div class="head flex j-spaceBetween">
-        <span>Cart(<span id="items-in-cart">0</span>)</span>
-        <span class="close-cart"><i class="fas fa-times"></i></span>
-    </div>
-    <div class="items flex f-column j-start">
-
-    </div>
-    <div class="foot flex f-column">
-        <div class="subtotal flex j-spaceBetween">
-            <span>Subtotal:</span>
-            <span id="subtotal" style="font-size: 20px;"></span>
+    <!--Finished show cart-->
+    <!--Compare products-->
+    <div class="compare-products flex a-center j-center">
+        <div class="compare-products-box">
+            <div class="head">
+                <p>Compare products</p>
+            
             </div>
-        <button class="flex j-center a-center"><a href="./cart.html" target="_blank">View Cart</a></button>
-        <button class="flex j-center a-center"><a>Checkout</a></button>
-    </div>
-</div>
-<!--Finished show cart-->
-
-<!--Show quick view box-->
-<div class="quick-view-section flex a-center j-center">
-    
-</div>
-<!--Finished Show quick view box-->
-
-<!--Compare products-->
-<div class="compare-products flex a-center j-center">
-    <div class="compare-products-box">
-        <div class="head">
-            <p>Compare products</p>
-           
+            <span class="close-compare-products"><i class="fas fa-times"></i></span>
+            <table class="content"></table>
         </div>
-        <span class="close-compare-products"><i class="fas fa-times"></i></span>
-        <table class="content"></table>
     </div>
-</div>
-<!--Finished Compare products-->
-
+    <!--Finished Compare products-->
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./src/js/main.js"></script>
+<script src="../src/js/wishlist.js"></script>
+<script src="../src/js/main.js"></script>
 </html>
+
