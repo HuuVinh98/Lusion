@@ -1,0 +1,268 @@
+@import "flex";
+@import "media";
+@import "grid";
+$color:#cebaa4;
+$backgrond: #1a1d24;
+$font:"Jost","Sans Serif";
+$hover-color:#C27B43;
+@import 'flex';
+body,html 
+{
+    font-family: $font;
+}
+
+.container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ad-modal-box
+{
+    width: 400px;
+    @include xs()
+    {
+        width: 90%;
+    }
+    display: none;
+    position: fixed;
+    z-index: 20;
+    @media (max-width:1024px)
+    {
+        bottom: 60px;
+    }
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    // transform: translateY(100%);
+    .modal-box
+    {
+        display: flex;
+        padding: 15px;
+        img 
+        {
+            height: 100px;
+            margin-right: 20px;
+        }
+        .text{
+            p 
+            {
+                a 
+                {
+                    font-size: 18px;
+                    color: black
+                }
+                &:last-child
+                {
+                    bottom: 15px;
+                    position: absolute;
+                }
+            }
+        }
+        span 
+        {
+            position: absolute;
+            right: 15px;
+            font-size: 14px;
+            // z-index: 5000;
+            // text-align: right;
+        }
+    }
+}
+.container 
+{
+    margin-top: 50px;
+    @include md()
+    {
+        flex-direction: column;
+    }
+    .left
+    {
+        width: 60%;
+        @include md()
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        img 
+        {
+            width: 88px;
+            height: 30px;
+        }
+        .question 
+        {
+            margin-top: 20px;
+            width: 50%;
+            div 
+            {
+                margin-bottom: 10px;
+                span,i,a 
+                {
+                    color: #2c2c2c;
+                    font-size: 16px;
+                }
+                span 
+                {
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        .billing-details
+        {
+            width: 100%;
+            margin-top: 20px;
+            h2 
+            {
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+            input,select
+            {
+                height: 45px;
+                width: 100%;
+                border:1px solid #ebeeee;
+                padding-left: 10px;
+            }
+            textarea 
+            {
+                width: 100%;
+                padding: 10px;
+            }
+            p 
+            {
+                color: #707070;
+                font-size: 16px;
+            }
+            form 
+            {
+                width: 100%;
+                textarea,select 
+                {
+                    outline: none;
+                    border-color: #ebeeee;
+                }
+                .name
+                { 
+                    width: 100%;
+                    div 
+                    {
+                        width: 48%;
+                        input {width: 100%;}
+                    }
+                }
+                div
+                {
+                    margin-top: 20px;
+                }
+                .street 
+                {
+                    input 
+                    {
+                        &:last-child 
+                        {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                p 
+                {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+    }
+    .right
+    {
+        padding:15px;
+        background-color: #f4f4f4;
+        height: max-content;
+        width: 38%;
+        @include md()
+        {
+            width: 100%;
+        }
+        .back
+        {
+            a {color: #2c2c2c;}
+        }
+        .order-summary
+        {
+            margin-top: 50px;
+            h2 
+            {
+                color: #2c2c2c;
+                font-weight: 400;
+            }
+            .cart-list
+            {
+                .list
+                {
+                    padding: 50px 0px;
+                    .product
+                    { 
+                        align-items: center;
+                        margin-bottom: 20px;
+                        &:last-child
+                        {
+                            margin-bottom: 0px;
+                        }
+                        .image
+                        {
+                            width: 60px;
+                            height: 75px;
+                            border: 1px solid #ebeeee;
+                            img 
+                            {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            margin-right: 20px;
+                        }
+                        .info
+                        {
+                            width: 80%;
+                            .name-quantity
+                            {
+                                span 
+                                {
+                                    padding: 3px 15px;
+                                    background-color: #f0e4db;
+                                    border-radius: 40%;
+                                    width: max-content;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .cost
+            {
+                border-top:1px solid #ebeeee;
+                border-bottom:1px solid #ebeeee;
+                padding:20px 0px;
+            }
+            form 
+            {
+                .option 
+                {
+                    p 
+                    {
+                        padding: 10px 30px;
+                        color: #9a9a9a;
+                    }
+                }
+
+                button 
+                {
+                    margin-top: 20px;
+                    width: 100%;
+                    padding: 15px;
+                    color: white;
+                    background-color: #333;
+                }
+            }
+        }
+    }
+}

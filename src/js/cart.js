@@ -161,3 +161,7 @@ $(document).ready(function () {
         }  
     });
 });
+
+$(document).on("click",".checkout", function () {
+    window.open("./checkout.html","blank")
+});
