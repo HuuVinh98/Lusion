@@ -1,3 +1,14 @@
+if(JSON.parse(localStorage.getItem('cart'))===null)
+{
+    let cart = [];
+    localStorage.setItem('cart',JSON.stringify(cart));
+}
+if(JSON.parse(localStorage.getItem('wishlist'))===null)
+{
+    let wishlist = [];
+    localStorage.setItem('wishlist',JSON.stringify(wishlist));
+}
+
 /*====Search box and navigation====*/
 $(document).ready(function () {
     //open search-box
@@ -191,13 +202,13 @@ $(document).ready(function () {
         }
         else
         {
-                if(!/^[a-za-z0-9]/.test(Reg_email)||!/@./.test(Reg_email))
+                if(!/^[a-zA-Z0-9]/.test(Reg_email)||!/@./.test(Reg_email))
             {
                 $(`<p style="font-size:16px;color:red;text-align:left;">Please enter the valid email address.</p>`).appendTo(".register-email");
             }
         }
 
-        if(Reg_userName&&Reg_password&&Reg_email&&Reg_email.includes("@")===true)
+        if(Reg_userName&&Reg_password&&Reg_email&&/^[a-zA-Z0-9]@./.test(Reg_email)===true)
         {
             $(`
                 <p><i class="fas fa-check"></i> Sending user info, please wait...</p>
@@ -311,7 +322,7 @@ $(function ()
                 } 
                 else 
                 {
-                $("#header-origin").stop(true,false,true).slideDown(100);
+                    $("#header-origin").stop(true,false,true).slideDown(100);
                           
                 }
                 lastScrollTop = nowScrollTop;
@@ -422,7 +433,7 @@ const renderCart = (cart,quantity)=>
     $("#cart span").text(`${quantity}`);
     $("#subtotal").text(`£${cart.reduce((acc,val)=>{
        let price = Number(val.price.split("").splice(1,val.price.length).join(""));
-       return Number((acc+val.quantity*price).toFixed(2)) },0)}`);
+       return Number((acc+val.quantity*price).toFixed(2))},0)}`);
     $("#cart-icon span").text(`${quantity}`);
     if(cart.length)
     {
@@ -959,7 +970,7 @@ $(document).ready(function () {
 });
 
 /* ====Countdown====*/
-const deadLine = "2021/6/31";
+const deadLine = "2022/6/31";
 const getTime = (deadLine) =>
 {
     const deadLineDate = new Date(deadLine);
